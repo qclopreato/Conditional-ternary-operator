@@ -7,10 +7,10 @@ let myArray = [];
 document.getElementById(`submit`).disabled = true;
 document.getElementById(`multiply`).disabled = true;
 document.getElementById(`filter`).disabled = true;
+document.getElementById(`number`).value = 0;
 
 inpt.onclick = function(){
     document.getElementById(`submit`).disabled = false;
-    document.getElementById(`number`).value = 0;
 }
 
 a.onclick = function(){
