@@ -15,8 +15,8 @@ inpt.onclick = function(){
 
 a.onclick = function(){
     let number = parseInt(document.getElementById(`number`).value);
-    const result = clicks < 5 ? (clicks = clicks + 1, myArray.push(number), document.getElementById(`returnArray`).innerHTML = `Chosen Array: ` + myArray) : (document.getElementById(`multiply`).disabled = false, document.getElementById(`submit`).disabled = true, document.getElementById(`filter`).disabled = false);
-    console.log(result);
+    const result = clicks < 5 ? (clicks = clicks + 1, myArray.push(number), document.getElementById(`returnArray`).innerHTML = `Chosen Array: ` + myArray) : undefined;
+    const disable = clicks === 5 ? (a.disabled = true, document.getElementById(`multiply`).disabled = false, document.getElementById(`submit`).disabled = true, document.getElementById(`filter`).disabled = false) : undefined;
 }
 
 b.onclick = function(){
@@ -27,6 +27,6 @@ b.onclick = function(){
 
 c.onclick = function(){
     const filtration = myArray.filter(x => x < 3);
-    document.getElementById(`returnFilter`).innerHTML = `Array Numbers Below 3: ` + filtration;
+    document.getElementById(`returnFilter`).innerHTML = `List of Numbers Below 3: ` + filtration;
     document.getElementById(`filter`).disabled = true;
 }
